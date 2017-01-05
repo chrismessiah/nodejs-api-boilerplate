@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = function(req, res) {
-  res.json('Hello World!');
+  res.json({message: 'Hello World!'});
 };

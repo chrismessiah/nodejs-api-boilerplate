@@ -1,8 +1,8 @@
 'use strict';
 
-// *******************************************************
-// Get all read all controllers/*/index.js and export them
-// *******************************************************
+// *****************************************************************
+// Read all controllers/*/index.js and export them, dont touch this
+// *****************************************************************
 
 const humps = require('humps');
 const fs = require('fs');

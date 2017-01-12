@@ -17,8 +17,10 @@ controllerFolders.forEach(function(folderName){
   let methodFiles = fs.readdirSync(`${controllerPath}/${folderName}/`);
 
   methodFiles.forEach(function(fileName) {
-    let methodName = humps.camelize(fileName).replace('.js','');
-    controller[controllerName][methodName] = require(`${controllerPath}/${folderName}/${fileName}`);
+    if (fileName.includes('.js')) {
+      let methodName = humps.camelize(fileName).replace('.js','');
+      controller[controllerName][methodName] = require(`${controllerPath}/${folderName}/${fileName}`);
+    }
   });
 });
 

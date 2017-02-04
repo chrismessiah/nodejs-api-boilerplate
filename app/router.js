@@ -2,7 +2,7 @@
 
 exports.getRouter = function getRouter(router, controller) {
   router.route('/')
-    .get(controller.controller1.hello);
+    .get(controller.controller1.subController.bar);
   router.route('/login/')
     .get(controller.controller1.login);
   router.route('/signup/')
